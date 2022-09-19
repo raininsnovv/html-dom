@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>интукод</title>
+</head>
+
+<body>
+    <div id="main">
+        <ul id="list">
+            <li>html</li>
+            <li>css</li>
+        </ul>
+    </div>
+    <div id="copyright">(c) INTOCODE</div>
+    <script>
+        const addH1 = () => {
+            const h1 = document.createElement('h1')
+            h1.textContent = 'Работа с DOM'
+            document.body.prepend(h1)
+        }
+        const addLinkDom = () => {
+            const div = document.getElementById('main')
+            const a = document.createElement('a')
+            a.href = 'dom.ru'
+            a.textContent = 'Статья о ДОМ'
+            div.append(a)
+        }
+
+        const changeColor = (color) => {
+            document.body.style.backgroundColor = color
+        }
+
+        const addLi = (text) => {
+            const ul = document.getElementById('list')
+            const li = document.createElement('li')
+            li.textContent = text
+            ul.append(li)
+        }
+        const deleteCopyright = () => {
+            const copyright = document.getElementById("copyright");
+            copyright.remove();
+        }
+
+        //вызовы функций 
+
+        addLi('Joe')
+
+
+    </script>
+</body>
+
+</html>
